@@ -10,6 +10,7 @@ import Staking3D from '@/assets/svg/Staking3D';
 import Lightning3D from '@/assets/svg/Lightning3D';
 import AI3D from '@/assets/svg/AI3D';
 import Chains3D from '@/assets/svg/Chains3D';
+import TradingChart from '@/assets/svg/TradingChart';
 import StackBackgroundSVG from './StackBackgroundSVG';
 
 const features = [
@@ -210,9 +211,9 @@ const SectionStackFeatures = () => {
                                     }}
                                     className="w-full max-w-5xl mx-auto"
                                 >
-                                    <div className="relative bg-[#1A1A1A] rounded-2xl p-8 md:p-12 overflow-hidden">
-                                        <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNCMTc0M0MiIG9wYWNpdHk9IjAuMSIvPjwvc3ZnPg==')]" />
-                                        <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+                                    <div className="relative bg-[#1A1A1A] rounded-2xl p-8 md:p-10 overflow-hidden">
+                                        <div className="absolute inset-0 opacity-10" />
+                                        <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center ">
                                             <div>
                                                 <h3 className="text-3xl font-bold text-white mb-4">
                                                     Institutional Liquidity
@@ -229,10 +230,11 @@ const SectionStackFeatures = () => {
                                                     ))}
                                                 </div>
                                             </div>
-                                            <div className="hidden lg:block">
-                                                <div className="bg-[#B1743C]/10 rounded-lg shadow-2xl border border-[#B1743C]/20 p-4">
-                                                    <div className="aspect-video bg-gray-800 rounded flex items-center justify-center text-gray-400">
-                                                        [Trading Chart Visualization]
+                                            {/* trading chart box  */}
+                                            <div className="hidden lg:block ">
+                                                <div className="bg-[#B1743C]/10 rounded-lg shadow-2xl border border-[#B1743C]/20 p-1 w-[300px] h-[200px]">
+                                                    <div className="bg-gray-800 rounded flex items-center justify-center w-full h-full">
+                                                        <TradingChart size={300} />
                                                     </div>
                                                 </div>
                                             </div>
