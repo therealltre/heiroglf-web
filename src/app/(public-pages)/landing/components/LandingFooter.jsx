@@ -37,7 +37,7 @@ const LandingFooter = ({ mode }) => {
                                 }}
                                 className="relative flex flex-col gap-4 items-center justify-center py-20 px-8 text-center"
                             >
-                                <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-[#B1743C] dark:from-blue-400 dark:to-purple-400">
+                                <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-[#fff] dark:from-blue-400 dark:to-purple-400">
                                     Why Join the Waitlist?
                                 </h2>
 
@@ -172,12 +172,12 @@ const LandingFooter = ({ mode }) => {
                                 </span>
                             </Link>
                             <div className="flex items-center gap-6">
-                                <Link href="/privacy" className="text-sm text-white hover:text-[#B1743C] dark:hover:text-black transition-colors">
+                                {/* <Link href="/privacy" className="text-sm text-white hover:text-[#B1743C] dark:hover:text-black transition-colors">
                                     Privacy Policy
                                 </Link>
                                 <Link href="/terms" className="text-sm text-white hover:text-[#B1743C] dark:hover:text-black transition-colors">
                                     Terms of Service
-                                </Link>
+                                </Link> */}
                                 <div className="flex gap-4">
                                     <Link href="https://twitter.com/heiroglf" target="_blank" className="text-white hover:text-[#B1743C] dark:hover:text-black transition-colors">
                                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

@@ -17,18 +17,11 @@ const HeroContent = ({ mode }) => {
     //     router.push('/sign-up')
     // }
 
-    const handleScrollToFooter = () => {
-        const footer = document.getElementById('footer');
-        if (footer) {
-            footer.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
-
     return (
         // <div className="relative min-h-screen overflow-hidden">
 
         <div className="max-w-7xl mx-auto px-4 flex min-h-screen flex-col items-center justify-between">
-            <div className="flex flex-col min-h-[60dvh] pt-20 md:pt-40 relative overflow-hidden">
+            <div className="flex flex-col pt-20 md:pt-40 relative overflow-hidden">
                 <div>
                     <TextGenerateEffect
                         wordClassName="text-2xl md:text-4xl lg:text-7xl font-bold max-w-4xl mx-auto text-center mt-6 relative z-10"
@@ -58,7 +51,7 @@ const HeroContent = ({ mode }) => {
                         className="flex items-center gap-4 justify-center mt-10 relative z-10"
                     >
                         <Button variant="solid"
-                            onClick={handleScrollToFooter}
+                            // onClick={handleGetStarted} 
                             className=" bg-[#B1743C] text-white hover:bg-[#B1743C]/80">
                             Join the Waitlist
                         </Button>
@@ -89,6 +82,7 @@ const HeroContent = ({ mode }) => {
                         </div>
                     </motion.div>
                 </div>
+
                 <div className="p-2 lg:p-4 border border-gray-200/50 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 dark:border-gray-700 rounded-2xl lg:rounded-[32px] mt-20 relative">
                     <div className="absolute inset-x-0 bottom-0 h-40 w-full bg-gradient-to-b from-transparent via-white to-white dark:via-gray-900 dark:to-gray-900 scale-[1.1] pointer-events-none" />
                     <div className="bg-white dark:bg-gray-900 dark:border-gray-700 border border-gray-200 rounded-[24px] overflow-hidden shadow-xl">
@@ -113,25 +107,7 @@ const HeroContent = ({ mode }) => {
                             />
                         )}
                     </div>
-                    <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2">
-                        {['BTC', 'ETH', 'XRP', 'ADA', 'SOL'].map(
-                            (coin, index) => (
-                                <motion.div
-                                    key={index}
-                                    initial={{ y: 10, opacity: 0 }}
-                                    animate={{ y: 0, opacity: 1 }}
-                                    transition={{
-                                        duration: 0.3,
-                                        delay: 0.8 + index * 0.1,
-                                    }}
-                                    className="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full shadow-md text-xs font-medium flex items-center"
-                                >
-                                    <span className="mr-1">↑</span>
-                                    {coin} +{Math.floor(Math.random() * 5) + 1}%
-                                </motion.div>
-                            ),
-                        )}
-                    </div>
+
                 </div>
             </div>
         </div>

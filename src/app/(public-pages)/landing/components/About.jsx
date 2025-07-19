@@ -1,4 +1,5 @@
-import { useState } from 'react';
+'use client'
+import { useState, useEffect } from 'react';
 import Container from './LandingContainer';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -73,18 +74,25 @@ const featureList = [
 
 const AboutSection = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
 
     return (
         <div id="about" className="relative py-10 md:py-40 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-black overflow-hidden">
             {/* Video Background */}
-            <video
-                className="absolute inset-0 w-full h-full object-cover opacity-20 z-0"
-                src="/video/landing/coins-stack.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-            />
+            {isClient && (
+                <video
+                    className="absolute inset-0 w-full h-full object-cover opacity-20 z-0"
+                    src="/video/landing/coins-stack.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                />
+            )}
             {/* Overlay for readability */}
             <div className="absolute inset-0 bg-black/40 z-10 pointer-events-none" />
             <div className="relative z-20">
@@ -102,10 +110,13 @@ const AboutSection = () => {
                             </span>
                         </motion.h2>
 
-                        <motion.div className="mx-auto max-w-3xl space-y-8">
-                            <p className="text-lg text-gray-600 dark:text-gray-300">
-                                HEIROGLF is a Pan-African crypto exchange redefining finance for the continent. Built for Africa, by Africa, we empower users to trade, save, and invest securely in digital assets.
-                            </p>
+                        <motion.div className="mx-auto max-w-7xl space-y-8">
+                            <div className='flex mx-auto max-w-3xl'>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 ">
+                                    HEIROGLF is a Pan-African crypto exchange redefining finance for the continent. Built for Africa, by Africa, we empower users to trade, save, and invest securely in digital assets.
+                                </p>
+                            </div>
+
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="p-6 bg-[#B1743C]/10 dark:bg-[#B1743C]/20 rounded-xl border border-[#B1743C]/20">
