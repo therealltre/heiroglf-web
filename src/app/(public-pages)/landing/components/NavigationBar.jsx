@@ -102,8 +102,6 @@ const Navigation = ({ toggleMode, mode }) => {
                             src="/img/logo/logo-dark-full1.png"
                             width={50}
                             height={50}
-                            // width={120}
-                            // height={40}
                             alt="logo"
                         />
                     )}

@@ -2,16 +2,17 @@
 
 import HeroContent from './HeroContent'
 import NavigationBar from './NavigationBar'
-import Features from './Features'
-import Demos from './Demos'
-import TechStack from './TechStack'
-import OtherFeatures from './OtherFeatures'
-import Components from './Components'
+// import Features from './Features'
+// import Demos from './Demos'
+// import TechStack from './About'
+// import OtherFeatures from './OtherFeatures'
+// import Components from './Components'
 import LandingFooter from './LandingFooter'
 import useTheme from '@/utils/hooks/useTheme'
 import { MODE_DARK, MODE_LIGHT } from '@/constants/theme.constant'
 import SecondSection from './SecondSection'
 import { useEffect, useRef } from 'react'
+import AboutSection from './About'
 
 const Landing = () => {
     const mode = useTheme((state) => state.mode)
@@ -69,7 +70,7 @@ const Landing = () => {
                 onModeChange={(value) => setMode(value ? 'dark' : 'light')}
             /> */}
             {/* <Demos mode={mode} /> */}
-            <TechStack />
+            <AboutSection />
             {/* <OtherFeatures /> */}
             {/* <Components /> */}
             <LandingFooter mode={mode} />
