@@ -1,38 +1,70 @@
 'use client'
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import { TbShieldLock, TbCoinBitcoin, TbArrowsExchange, TbRocket, TbChartLine, TbWallet } from 'react-icons/tb';
+import Bitcoin3D from '@/assets/svg/Bitcoin3D';
+import Wallet3D from '@/assets/svg/Wallet3D';
+import CryptoStack3D from '@/assets/svg/CryptoStack3D';
+import Shield3D from '@/assets/svg/Shield3D';
+import Swap3D from '@/assets/svg/Swap3D';
+import Staking3D from '@/assets/svg/Staking3D';
+import Lightning3D from '@/assets/svg/Lightning3D';
+import AI3D from '@/assets/svg/AI3D';
+import Chains3D from '@/assets/svg/Chains3D';
 
 const features = [
     {
-        icon: <TbShieldLock size={28} />,
+
         title: 'Bank-Grade Security',
-        description: 'Military-grade encryption and multi-signature wallets keep your assets safe.'
+        description: 'Military-grade encryption and multi-signature wallets keep your assets safe.',
+        details: 'All transactions are protected by advanced cryptography and 24/7 monitoring.',
+        stats: '99.99% uptime | SOC2 Certified',
+        illustration: <Shield3D size={80} />,
+
     },
     {
-        icon: <TbArrowsExchange size={28} />,
+
         title: 'Instant Swaps',
-        description: 'Exchange 100+ cryptocurrencies instantly with zero slippage.'
+        description: 'Exchange 100+ cryptocurrencies instantly with zero slippage.',
+        details: 'Our proprietary engine ensures the best rates and zero slippage on every trade.',
+        stats: '100+ coins | 0% slippage',
+        illustration: <Swap3D size={80} />,
+
     },
     {
-        icon: <TbCoinBitcoin size={28} />,
+
         title: 'Staking Rewards',
-        description: 'Earn up to 12% APY on your digital assets with flexible staking.'
+        description: 'Earn up to 12% APY on your digital assets with flexible staking.',
+        details: 'Flexible terms, daily payouts, and no lock-in period for your assets.',
+        stats: 'Up to 12% APY | Flexible terms',
+        illustration: <Staking3D size={80} />,
+
     },
     {
-        icon: <TbRocket size={28} />,
+
         title: 'Lightning Network',
-        description: 'Experience instant Bitcoin transactions with minimal fees.'
+        description: 'Experience instant Bitcoin transactions with minimal fees.',
+        details: 'Leverage the power of the Lightning Network for fast, low-cost payments.',
+        stats: 'Instant | Low fees',
+        illustration: <Lightning3D size={80} />,
+
     },
     {
-        icon: <TbChartLine size={28} />,
+
         title: 'AI Trading',
-        description: 'Benefit from AI-optimized trading strategies for better returns.'
+        description: 'Benefit from AI-optimized trading strategies for better returns.',
+        details: 'Automated trading powered by advanced machine learning algorithms.',
+        stats: 'AI-driven | Backtested strategies',
+        illustration: <AI3D size={80} />,
+
     },
     {
-        icon: <TbWallet size={28} />,
+
         title: 'Multi-Chain Support',
-        description: 'Manage assets across 15+ blockchains in one secure wallet.'
+        description: 'Manage assets across 15+ blockchains in one secure wallet.',
+        details: 'Seamlessly transfer, swap, and monitor assets across multiple chains.',
+        stats: '15+ blockchains | Unified wallet',
+        illustration: <Chains3D size={80} />,
+
     }
 ];
 
@@ -53,7 +85,7 @@ const SectionStackFeatures = () => {
         const middle = (i + 1) / (totalCards + 3);
         const end = (i + 2) / (totalCards + 3);
 
-        const y = useTransform(scrollYProgress, [start, middle, end], [400, 0, -10]);
+        const y = useTransform(scrollYProgress, [start, middle, end], [500, 0, -10]);
         const scale = useTransform(scrollYProgress, [start, middle], [0.9, 1]);
 
         return { ...feature, y, scale };
@@ -102,14 +134,17 @@ const SectionStackFeatures = () => {
                                         margin: '0 auto',
                                         zIndex: 10 + i
                                     }}
-                                    className="bg-white border border-gray-200 rounded-2xl shadow-lg p-6 flex items-start gap-4 w-full max-w-4xl"
+                                    className="bg-white border border-gray-200 rounded-2xl shadow-lg p-10 min-h-[200px] flex items-start gap-6 w-full max-w-4xl"
                                 >
-                                    <div className="w-14 h-14 rounded-lg bg-[#B1743C]/10 flex items-center justify-center text-[#B1743C] text-3xl shrink-0">
-                                        {feature.icon}
+                                    <div className="flex flex-col items-center justify-start w-32 shrink-0">
+                                        <div className="mb-2">{feature.illustration}</div>
+
                                     </div>
-                                    <div>
+                                    <div className="flex-1">
                                         <h3 className="text-xl font-semibold mb-1 text-gray-900">{feature.title}</h3>
-                                        <p className="text-gray-600 text-base">{feature.description}</p>
+                                        <p className="text-gray-600 text-base mb-2">{feature.description}</p>
+                                        <p className="text-sm text-gray-500 mb-1">{feature.details}</p>
+                                        <div className="text-xs text-gray-400 mb-2">{feature.stats}</div>
                                     </div>
                                 </motion.div>
                             ))}
@@ -162,14 +197,32 @@ const SectionStackFeatures = () => {
 
                 {/* Decorative Crypto SVGs */}
                 <div className="pointer-events-none absolute inset-0 z-0">
-                    {/* Top-left */}
-                    <div className="absolute top-0 left-0 w-40 h-40 opacity-10 rotate-12">
-                        <TbCoinBitcoin className="w-full h-full text-[#B1743C]" />
+                    {/* Sticky Top SVG */}
+                    <div className="sticky top-10 h-0 w-full">
+                        {/* Top-left */}
+                        <motion.div
+                            className="absolute left-0 w-40 h-40 opacity-90 rotate-12"
+                            style={{ top: 0 }}
+                            initial={{ y: 0 }}
+                            animate={{ y: [0, -20, 0] }}
+                            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+                        >
+                            <Bitcoin3D size={130} />
+                            {/* <CryptoStack3D size={130} /> */}
+                        </motion.div>
                     </div>
 
-                    {/* Bottom-right */}
-                    <div className="absolute bottom-0 right-0 w-32 h-32 opacity-10 -rotate-12">
-                        <TbWallet className="w-full h-full text-[#B1743C]" />
+                    {/* Sticky Bottom SVG */}
+                    <div className="sticky top-220 h-0 w-full">
+                        <motion.div
+                            className="absolute right-0 w-32 h-32 opacity-90 -rotate-12"
+                            style={{ bottom: 0 }}
+                            initial={{ y: 0 }}
+                            animate={{ y: [0, 20, 0] }}
+                            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+                        >
+                            <Wallet3D size={130} />
+                        </motion.div>
                     </div>
 
                     {/* Optional: Center gradient burst */}

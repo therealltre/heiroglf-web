@@ -11,14 +11,14 @@ import { Button } from '@/components/ui'
 
 const navMenu = [
     {
-        title: 'Discover',
-        value: 'discover',
-        to: 'discover',
-    },
-    {
         title: 'About',
         value: 'about',
         to: 'about',
+    },
+    {
+        title: 'Discover',
+        value: 'discover',
+        to: 'discover',
     },
     {
         title: 'Wait List',

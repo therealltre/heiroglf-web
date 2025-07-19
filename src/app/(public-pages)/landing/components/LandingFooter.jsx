@@ -74,6 +74,10 @@ const LandingFooter = ({ mode }) => {
                                 </div>
 
                                 <div className="mt-10 w-full max-w-md mx-auto">
+                                    <p className="mb-4 text-lg font-semibold text-gray-800 dark:text-gray-200 text-center">
+                                        Don’t miss out on the financial revolution.<br />
+                                        <span className="font-normal">Sign up today and be part of the HEIROGLF community.</span>
+                                    </p>
                                     <form
                                         action="https://api.web3forms.com/submit"
                                         method="POST"
@@ -137,6 +141,8 @@ const LandingFooter = ({ mode }) => {
 
                 </Container>
             </div>
+
+
             {/* footer section  */}
             <div className="bg-[#B1743C]">
                 <Container>

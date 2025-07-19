@@ -10,7 +10,7 @@ import NavigationBar from './NavigationBar'
 import LandingFooter from './LandingFooter'
 import useTheme from '@/utils/hooks/useTheme'
 import { MODE_DARK, MODE_LIGHT } from '@/constants/theme.constant'
-import SecondSection from './SecondSection'
+import Discover from './Discover'
 import { useEffect, useRef } from 'react'
 import AboutSection from './About'
 
@@ -57,7 +57,8 @@ const Landing = () => {
                 </div>
                 <HeroContent mode={mode} />
             </div>
-            <SecondSection
+            <AboutSection />
+            <Discover
                 mode={mode}
                 schema={schema}
                 setSchema={setSchema}
@@ -70,7 +71,7 @@ const Landing = () => {
                 onModeChange={(value) => setMode(value ? 'dark' : 'light')}
             /> */}
             {/* <Demos mode={mode} /> */}
-            <AboutSection />
+
             {/* <OtherFeatures /> */}
             {/* <Components /> */}
             <LandingFooter mode={mode} />

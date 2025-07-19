@@ -17,11 +17,18 @@ const HeroContent = ({ mode }) => {
     //     router.push('/sign-up')
     // }
 
+    const handleScrollToFooter = () => {
+        const footer = document.getElementById('footer');
+        if (footer) {
+            footer.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         // <div className="relative min-h-screen overflow-hidden">
 
         <div className="max-w-7xl mx-auto px-4 flex min-h-screen flex-col items-center justify-between">
-            <div className="flex flex-col min-h-screen pt-20 md:pt-40 relative overflow-hidden">
+            <div className="flex flex-col min-h-[60dvh] pt-20 md:pt-40 relative overflow-hidden">
                 <div>
                     <TextGenerateEffect
                         wordClassName="text-2xl md:text-4xl lg:text-7xl font-bold max-w-4xl mx-auto text-center mt-6 relative z-10"
@@ -51,7 +58,7 @@ const HeroContent = ({ mode }) => {
                         className="flex items-center gap-4 justify-center mt-10 relative z-10"
                     >
                         <Button variant="solid"
-                            // onClick={handleGetStarted} 
+                            onClick={handleScrollToFooter}
                             className=" bg-[#B1743C] text-white hover:bg-[#B1743C]/80">
                             Join the Waitlist
                         </Button>

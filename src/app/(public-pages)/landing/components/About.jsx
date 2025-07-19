@@ -107,11 +107,19 @@ const AboutSection = () => {
                                 HEIROGLF is a Pan-African crypto exchange redefining finance for the continent. Built for Africa, by Africa, we empower users to trade, save, and invest securely in digital assets.
                             </p>
 
-                            <div className="p-6 bg-[#B1743C]/10 dark:bg-[#B1743C]/20 rounded-xl border border-[#B1743C]/20">
-                                <h3 className="text-xl font-semibold text-[#B1743C] dark:text-[#E3A771] mb-3">Our Mission</h3>
-                                <p className="text-gray-700 dark:text-gray-300">
-                                    To create an accessible platform that integrates local payment solutions, ensures low fees, and provides bank-grade security—making cryptocurrency trading simple and reliable for everyone.
-                                </p>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="p-6 bg-[#B1743C]/10 dark:bg-[#B1743C]/20 rounded-xl border border-[#B1743C]/20">
+                                    <h3 className="text-xl font-semibold text-[#B1743C] dark:text-[#E3A771] mb-3">Our Mission</h3>
+                                    <p className="text-gray-700 dark:text-gray-300">
+                                        To create an accessible platform that integrates local payment solutions, ensures low fees, and provides bank-grade security—making cryptocurrency trading simple and reliable for everyone.
+                                    </p>
+                                </div>
+                                <div className="p-6 bg-[#B1743C]/10 dark:bg-[#B1743C]/20 rounded-xl border border-[#B1743C]/20">
+                                    <h3 className="text-xl font-semibold text-[#B1743C] dark:text-[#E3A771] mb-3">Our Vision</h3>
+                                    <p className="text-gray-700 dark:text-gray-300">
+                                        We’re bridging Africa to the global decentralized economy with a platform designed for speed, compliance, and trust.
+                                    </p>
+                                </div>
                             </div>
                         </motion.div>
                     </motion.div>
