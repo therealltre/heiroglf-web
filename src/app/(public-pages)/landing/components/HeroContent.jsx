@@ -20,7 +20,7 @@ const HeroContent = ({ mode }) => {
     return (
         // <div className="relative min-h-screen overflow-hidden">
 
-        <div className="max-w-7xl mx-auto px-4 flex min-h-screen flex-col items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 flex min-h-[100vh] flex-col items-center justify-between">
             <div className="flex flex-col pt-20 md:pt-40 relative overflow-hidden">
                 <div>
                     <TextGenerateEffect
@@ -91,7 +91,7 @@ const HeroContent = ({ mode }) => {
                                 className="rounded-2xl lg:rounded-[24px]"
                                 src="/img/landing/crypto-dashboard-light.jpg"
                                 width={1920}
-                                height={1040}
+                                height={600}
                                 alt="Crypto Dashboard"
                                 priority
                             />
@@ -101,7 +101,7 @@ const HeroContent = ({ mode }) => {
                                 className="rounded-2xl lg:rounded-[24px]"
                                 src="/img/landing/crypto-dashboard-light.jpg"
                                 width={1920}
-                                height={1040}
+                                height={600}
                                 alt="Crypto Dashboard"
                                 priority
                             />
