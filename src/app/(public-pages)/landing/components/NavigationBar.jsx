@@ -16,14 +16,14 @@ const navMenu = [
         to: 'discover',
     },
     {
-        title: 'Demos',
-        value: 'demos',
-        to: 'demos',
+        title: 'About',
+        value: 'about',
+        to: 'about',
     },
     {
-        title: 'Components',
-        value: 'components',
-        to: 'components',
+        title: 'Wait List',
+        value: 'wait-list',
+        to: 'footer',
     },
 
 ]
@@ -69,12 +69,12 @@ const Navigation = ({ toggleMode, mode }) => {
                         : 'bg-transparent dark:bg-transparent',
                 )}
             >
-                <button
+                <Button
                     onClick={openDrawer}
                     className="flex lg:hidden items-center gap-4"
                 >
                     <TbMenu2 size={24} />
-                </button>
+                </Button>
                 <Drawer
                     title="Navigation"
                     isOpen={isOpen}
@@ -82,9 +82,18 @@ const Navigation = ({ toggleMode, mode }) => {
                     onRequestClose={onDrawerClose}
                     width={250}
                     placement="left"
+                    overlayClassName="z-[70]" // ensure overlay is above navbar
+                    className="z-[80]" // ensure drawer content is above everything
                 >
                     <div className="flex flex-col gap-4">
                         <NavList onTabClick={onDrawerClose} tabs={navMenu} />
+                        {/* Show Get Started button only in Drawer (mobile) */}
+                        <Button
+                            variant="solid"
+                            className="bg-[#B1743C] text-white hover:bg-[#B1743C]/80 px-4 py-2 border border-gray-400 hover:border-white block lg:hidden mt-4"
+                        >
+                            Get Started
+                        </Button>
                     </div>
                 </Drawer>
                 <Link href="/">
@@ -121,9 +130,10 @@ const Navigation = ({ toggleMode, mode }) => {
                     >
                         Login
                     </Button>
+                    {/* Hide Get Started button in navbar on mobile, show only on lg+ */}
                     <Button
                         variant="solid"
-                        className="z-50 bg-[#B1743C] text-white hover:bg-[#B1743C]/80 px-4 py-2 border border-gray-400 hover:border-white "
+                        className="z-50 bg-[#B1743C] text-white hover:bg-[#B1743C]/80 px-4 py-2 border border-gray-400 hover:border-white hidden lg:block"
                     >
                         Get Started
                     </Button>
