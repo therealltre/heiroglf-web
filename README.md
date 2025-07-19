@@ -14,10 +14,10 @@ Heiroglf is a next-generation Pan-African cryptocurrency exchange, redefining fi
 
 ---
 ### Explore Heiroglf
-Check out the [Live Exchange](https://your-heiroglf-exchange.com/) (coming soon) to experience Heiroglf in action.
+Check out the [Live Exchange](https://www.heiroglf.com/) (coming soon) to experience Heiroglf in action.
 
 ### Get Started
-Visit our [Documentation](https://your-heiroglf-exchange.com/docs) for setup instructions, security tips, and more information about using Heiroglf.
+Visit our [Documentation](https://www.heiroglf.com/docs) for setup instructions, security tips, and more information about using Heiroglf.
 
 ---
 *Heiroglf – Bridging Africa to the global crypto economy.*
