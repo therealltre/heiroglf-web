@@ -9,6 +9,13 @@ import { useRouter } from 'next/navigation'
 const HeroContent = ({ mode }) => {
     const router = useRouter()
 
+    const handleJoinWaitlist = () => {
+        const footer = document.getElementById('footer')
+        if (footer) {
+            footer.scrollIntoView({ behavior: 'smooth' })
+        }
+    }
+
     // const handlePreview = () => {
     //     router.push('/dashboards/crypto')
     // }
@@ -51,7 +58,7 @@ const HeroContent = ({ mode }) => {
                         className="flex items-center gap-4 justify-center mt-10 relative z-10"
                     >
                         <Button variant="solid"
-                            // onClick={handleGetStarted} 
+                            onClick={handleJoinWaitlist} 
                             className=" bg-[#B1743C] text-white hover:bg-[#B1743C]/80">
                             Join the Waitlist
                         </Button>

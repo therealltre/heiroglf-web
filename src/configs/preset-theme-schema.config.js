@@ -1,16 +1,16 @@
 const defaultTheme = {
     light: {
-        primary: '#2a85ff',
-        primaryDeep: '#0069f6',
-        primaryMild: '#4996ff',
-        primarySubtle: '#2a85ff1a',
+        primary: '#B1743C',
+        primaryDeep: '#5b3228',
+        primaryMild: '#c48a4b',
+        primarySubtle: '#e3caa5',
         neutral: '#ffffff',
     },
     dark: {
-        primary: '#2a85ff',
-        primaryDeep: '#0069f6',
-        primaryMild: '#4996ff',
-        primarySubtle: '#2a85ff1a',
+        primary: '#B1743C',
+        primaryDeep: '#5b3228',
+        primaryMild: '#c48a4b',
+        primarySubtle: '#e3caa5',
         neutral: '#ffffff',
     },
 }
