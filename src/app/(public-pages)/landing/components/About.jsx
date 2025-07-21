@@ -128,7 +128,7 @@ const AboutSection = () => {
                         </motion.div>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="flex flex-wrap -m-3 justify-center">
                         {featureList.map((feature, index) => (
                             <motion.div
                                 key={feature.id}
@@ -141,7 +141,7 @@ const AboutSection = () => {
                                     delay: index * 0.1,
                                 }}
                                 viewport={{ once: true }}
-                                className="relative p-4"
+                                className="relative w-full sm:w-1/2 lg:w-1/4 p-3"
                                 onMouseEnter={() => setHoveredIndex(index)}
                                 onMouseLeave={() => setHoveredIndex(null)}
                             >
