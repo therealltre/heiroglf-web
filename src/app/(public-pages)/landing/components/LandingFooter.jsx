@@ -24,7 +24,7 @@ const LandingFooter = ({ mode }) => {
                 <Container className="relative ">
                     <div className="py-10 md:py-40">
                         <AuroraBackground
-                            className="rounded-3xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 dark:from-blue-900/20 dark:to-purple-900/20"
+                            className="rounded-3xl bg-gradient-to-br from-transparent to-transparent dark:from-transparent dark:to-transparent"
                             auroraClassName="rounded-3xl"
                         >
                             <motion.div
