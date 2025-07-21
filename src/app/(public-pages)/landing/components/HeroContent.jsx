@@ -27,8 +27,8 @@ const HeroContent = ({ mode }) => {
     return (
         // <div className="relative min-h-screen overflow-hidden">
 
-        <div className="max-w-7xl mx-auto px-4 flex min-h-[100vh] flex-col items-center justify-between">
-            <div className="flex flex-col pt-20 md:pt-40 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 flex min-h-[100vh] flex-col items-center justify-center">
+            <div className="flex flex-col relative overflow-hidden">
                 <div>
                     <TextGenerateEffect
                         wordClassName="text-2xl md:text-4xl lg:text-7xl font-bold max-w-4xl mx-auto text-center mt-6 relative z-10"
@@ -93,7 +93,7 @@ const HeroContent = ({ mode }) => {
                     </motion.div>
                 </div>
 
-                <div className="p-2 lg:p-4 border border-gray-200/50 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 dark:border-gray-700 rounded-2xl lg:rounded-[32px] mt-20 relative">
+                {/* <div className="p-2 lg:p-4 border border-gray-200/50 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 dark:border-gray-700 rounded-2xl lg:rounded-[32px] mt-20 relative">
                     <div className="absolute inset-x-0 bottom-0 h-40 w-full bg-gradient-to-b from-transparent via-white to-white dark:via-gray-900 dark:to-gray-900 scale-[1.1] pointer-events-none" />
                     <div className="bg-white dark:bg-gray-900 dark:border-gray-700 border border-gray-200 rounded-[24px] overflow-hidden shadow-xl">
                         {mode === MODE_LIGHT && (
@@ -118,7 +118,7 @@ const HeroContent = ({ mode }) => {
                         )}
                     </div>
 
-                </div>
+                </div> */}
             </div>
         </div>
         // </div>

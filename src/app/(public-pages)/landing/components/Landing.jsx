@@ -49,7 +49,7 @@ const Landing = () => {
                         muted
                         playsInline
                         // className="absolute inset-0 w-full h-full object-cover  z-0"
-                        className="absolute inset-0 w-full h-full object-cover opacity-80 z-0"
+                        className="absolute inset-0 w-full h-full object-cover object-top opacity-80 z-0"
                     >
                         <source src="/video/landing/file.mp4" type="video/mp4" />
                         {/* <source src="/video/landing/crypto-hero-bg.mp4" type="video/mp4" /> */}
