@@ -58,7 +58,7 @@ const HeroContent = ({ mode }) => {
                         className="flex items-center gap-4 justify-center mt-10 relative z-10"
                     >
                         <Button variant="solid"
-                            onClick={handleJoinWaitlist} 
+                            onClick={handleJoinWaitlist}
                             className=" bg-[#B1743C] text-white hover:bg-[#B1743C]/80">
                             Join the Waitlist
                         </Button>
@@ -72,11 +72,11 @@ const HeroContent = ({ mode }) => {
                     >
                         <div className="flex items-center">
                             <div className="flex -space-x-2">
-                                {['BTC', 'ETH', 'SOL', 'BNB'].map(
+                                {['BTC', 'ETH', 'XRP', 'USDT'].map(
                                     (coin, index) => (
                                         <div
                                             key={index}
-                                            className="w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-200 border-2 border-white dark:border-gray-900 flex items-center justify-center text-xs font-bold"
+                                            className="w-10 h-10 rounded-full bg-[gray]-100 dark:bg-[#B1743C] border-2 border-white dark:border-gray-900 flex items-center justify-center text-xs dark:text-white font-bold"
                                         >
                                             {coin}
                                         </div>
@@ -84,8 +84,11 @@ const HeroContent = ({ mode }) => {
                                 )}
                             </div>
                             <span className="ml-3 text-sm text-black dark:text-white">
-                                1000+ assets supported
+                                assets supported
                             </span>
+                            {/* <span className="ml-3 text-sm text-black dark:text-white">
+                                1000+ assets supported
+                            </span> */}
                         </div>
                     </motion.div>
                 </div>

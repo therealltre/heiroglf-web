@@ -29,13 +29,6 @@ const featureList = [
         color: 'text-[#B1743C]'
     },
     {
-        id: 'stake',
-        title: 'Earn & Stake',
-        description: 'Grow your crypto holdings with industry-leading staking rewards and yield products.',
-        icon: <TbCoin size={32} />,
-        color: 'text-[#B1743C]'
-    },
-    {
         id: 'education',
         title: 'Crypto Education',
         description: 'Free learning resources to help you master digital assets and blockchain technology.',

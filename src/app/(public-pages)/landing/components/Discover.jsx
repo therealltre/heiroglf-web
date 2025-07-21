@@ -1,6 +1,6 @@
 'use client'
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Bitcoin3D from '@/assets/svg/Bitcoin3D';
 import Wallet3D from '@/assets/svg/Wallet3D';
 import CryptoStack3D from '@/assets/svg/CryptoStack3D';
@@ -39,24 +39,6 @@ const features = [
         details: 'Flexible terms, daily payouts, and no lock-in period for your assets.',
         stats: 'Up to 12% APY | Flexible terms',
         illustration: <Staking3D size={80} />,
-
-    },
-    {
-
-        title: 'Lightning Network',
-        description: 'Experience instant Bitcoin transactions with minimal fees.',
-        details: 'Leverage the power of the Lightning Network for fast, low-cost payments.',
-        stats: 'Instant | Low fees',
-        illustration: <Lightning3D size={80} />,
-
-    },
-    {
-
-        title: 'AI Trading',
-        description: 'Benefit from AI-optimized trading strategies for better returns.',
-        details: 'Automated trading powered by advanced machine learning algorithms.',
-        stats: 'AI-driven | Backtested strategies',
-        illustration: <AI3D size={80} />,
 
     },
     {
@@ -103,6 +85,46 @@ const SectionStackFeatures = () => {
     const liquidityY = useTransform(scrollYProgress, [liquidityCardStart, liquidityCardMiddle, liquidityCardEnd], [600, 0, -10]);
     const liquidityScale = useTransform(scrollYProgress, [liquidityCardStart, liquidityCardMiddle], [0.9, 1]);
     const liquidityOpacity = useTransform(scrollYProgress, [liquidityCardStart - 0.05, liquidityCardStart, liquidityCardMiddle], [0, 1, 1]);
+
+    const [cryptoData, setCryptoData] = useState({});
+    const [loading, setLoading] = useState(true);
+
+    const tickers = ['BTC', 'ETH', 'XRP', 'USDT'];
+    const coinGeckoIds = {
+        BTC: 'bitcoin',
+        ETH: 'ethereum',
+        XRP: 'ripple',
+        USDT: 'tether',
+    };
+
+    useEffect(() => {
+        const fetchCryptoData = async () => {
+            try {
+                const ids = tickers.map((t) => coinGeckoIds[t]).join(',');
+                const response = await fetch(
+                    `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${ids}`
+                );
+                if (!response.ok) {
+                    throw new Error('Failed to fetch crypto data');
+                }
+                const data = await response.json();
+                const formattedData = data.reduce((acc, coin) => {
+                    acc[coin.symbol.toUpperCase()] = {
+                        price: coin.current_price,
+                        change: coin.price_change_percentage_24h,
+                    };
+                    return acc;
+                }, {});
+                setCryptoData(formattedData);
+            } catch (error) {
+                console.error(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchCryptoData();
+    }, []);
 
     return (
         <div id="discover">
@@ -222,12 +244,62 @@ const SectionStackFeatures = () => {
                                                     Access deep liquidity pools with tight spreads across all major trading pairs.
                                                 </p>
                                                 <div className="flex flex-wrap gap-4">
-                                                    {['BTC', 'ETH', 'SOL', 'XRP', 'ADA', 'DOT'].map((ticker) => (
-                                                        <div key={ticker} className="px-4 py-2 bg-[#B1743C]/10 rounded-lg flex items-center border border-[#B1743C]/20">
-                                                            <span className="text-[#B1743C] font-mono font-bold">{ticker}</span>
-                                                            <span className="ml-2 text-green-400 text-sm font-medium">+2.4%</span>
-                                                        </div>
-                                                    ))}
+                                                    {tickers.map((ticker) => {
+                                                        const data = cryptoData[ticker];
+                                                        const price = data
+                                                            ? `$${data.price.toLocaleString(
+                                                                  'en-US',
+                                                                  {
+                                                                      minimumFractionDigits: 2,
+                                                                      maximumFractionDigits: 2,
+                                                                  }
+                                                              )}`
+                                                            : 'Loading...';
+                                                        const change = data
+                                                            ? data.change.toFixed(2)
+                                                            : '';
+                                                        const changeColor = data
+                                                            ? data.change >= 0
+                                                                ? 'text-green-400'
+                                                                : 'text-red-400'
+                                                            : 'text-gray-400';
+                                                        const changeSign =
+                                                            data && data.change > 0
+                                                                ? '+'
+                                                                : '';
+
+                                                        return (
+                                                            <div
+                                                                key={ticker}
+                                                                className="px-4 py-2 bg-[#B1743C]/10 rounded-lg flex items-center border border-[#B1743C]/20"
+                                                            >
+                                                                <span className="text-[#B1743C] font-mono font-bold">
+                                                                    {ticker}
+                                                                </span>
+                                                                {loading ? (
+                                                                    <span className="ml-2 text-gray-400 text-sm font-medium">
+                                                                        Loading...
+                                                                    </span>
+                                                                ) : data ? (
+                                                                    <>
+                                                                        <span className="ml-3 text-white text-sm font-medium">
+                                                                            {price}
+                                                                        </span>
+                                                                        <span
+                                                                            className={`ml-2 text-sm font-medium ${changeColor}`}
+                                                                        >
+                                                                            {changeSign}
+                                                                            {change}%
+                                                                        </span>
+                                                                    </>
+                                                                ) : (
+                                                                    <span className="ml-2 text-red-400 text-sm font-medium">
+                                                                        Error
+                                                                    </span>
+                                                                )}
+                                                            </div>
+                                                        );
+                                                    })}
                                                 </div>
                                             </div>
                                             {/* trading chart box  */}
