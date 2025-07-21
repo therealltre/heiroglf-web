@@ -54,6 +54,7 @@ const Landing = () => {
                         <source src="/video/landing/file.mp4" type="video/mp4" />
                         {/* <source src="/video/landing/crypto-hero-bg.mp4" type="video/mp4" /> */}
                     </video >
+                    <div className="absolute inset-0 bg-amber-900/95 mix-blend-hue" />
                 </div>
                 <HeroContent mode={mode} />
             </div>
