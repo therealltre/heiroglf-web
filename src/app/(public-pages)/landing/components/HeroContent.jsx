@@ -49,7 +49,7 @@ const HeroContent = ({ mode }) => {
                         transition={{ duration: 0.3, delay: 0.5 }}
                         className="text-center mt-6 text-base md:text-xl text-black dark:text-white max-w-4xl mx-auto relative z-10 font-normal"
                     >
-                        HEIROGLF is building a secure and user-friendly cryptocurrency exchange tailored for Africa. Sign up today and get early access when we launch.
+                        HIEROGLF is building a secure and user-friendly cryptocurrency exchange tailored for Africa. Sign up today and get early access when we launch.
                     </motion.p>
                     <motion.div
                         initial={{ opacity: 0, translateY: 40 }}

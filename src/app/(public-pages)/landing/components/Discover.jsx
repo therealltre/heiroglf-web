@@ -182,10 +182,10 @@ const SectionStackFeatures = () => {
                             {/* Header */}
                             <div className="text-center mb-12">
                                 <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
-                                    Discover the HEIROGLF Platform
+                                    Discover the HIEROGLF Platform
                                 </h2>
                                 <p className="text-lg text-gray-600 dark:text-white max-w-xl mx-auto">
-                                    Explore the powerful features that make HEIROGLF the next-generation crypto platform.
+                                    Explore the powerful features that make HIEROGLF the next-generation crypto platform.
                                 </p>
                             </div>
 

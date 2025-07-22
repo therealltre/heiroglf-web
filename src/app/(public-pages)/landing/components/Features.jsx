@@ -188,7 +188,7 @@ const Features = ({ mode, onModeChange, schema, setSchema }) => {
                     viewport={{ once: true }}
                 >
                     <motion.h2 className="my-6 text-5xl">
-                        Discover the Power of HEIROGLF
+                        Discover the Power of HIEROGLF
                     </motion.h2>
                     <motion.p className="mx-auto max-w-[600px]">
                         Crafted for performance, scalability, and ease of

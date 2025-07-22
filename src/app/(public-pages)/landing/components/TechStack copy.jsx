@@ -69,11 +69,11 @@ const TechStack = () => {
                     Core Technologies Powering
                 </motion.h2>
                 <motion.p className="mx-auto max-w-[600px]">
-                    HEIROGLF is a Pan-African crypto exchange redefining finance
+                    HIEROGLF is a Pan-African crypto exchange redefining finance
                     for the continent. Built for Africa, by Africa, we empower
                     users to trade, save, and invest securely in digital assets.
                     With a focus on speed, user experience and local
-                    communities, HEIROGLF bridges Africa to the global
+                    communities, HIEROGLF bridges Africa to the global
                     decentralized economy.
                 </motion.p>
             </motion.div>

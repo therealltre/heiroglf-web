@@ -76,7 +76,7 @@ const LandingFooter = ({ mode }) => {
                                 <div className="mt-10 w-full max-w-md mx-auto">
                                     <p className="mb-4 text-lg font-semibold text-gray-800 dark:text-gray-200 text-center">
                                         Don’t miss out on the financial revolution.<br />
-                                        <span className="font-normal">Sign up today and be part of the HEIROGLF community.</span>
+                                        <span className="font-normal">Sign up today and be part of the HIEROGLF community.</span>
                                     </p>
                                     <form
                                         action="https://api.web3forms.com/submit"
@@ -86,7 +86,7 @@ const LandingFooter = ({ mode }) => {
                                         {/* Replace with your own Web3Forms Access Key */}
                                         <input type="hidden" name="access_key" value="13c5a260-67d9-4e2f-aac9-fa40fe48f177" />
                                         <input type="hidden" name="subject" value="New Waitlist Subscriber" />
-                                        <input type="hidden" name="from_name" value="HEIROGLF Waitlist" />
+                                        <input type="hidden" name="from_name" value="HIEROGLF Waitlist" />
 
                                         <input
                                             type="email"
@@ -168,7 +168,7 @@ const LandingFooter = ({ mode }) => {
                                     />
                                 )}
                                 <span className="font-bold text-lg bg-clip-text text-transparent bg-[#B1743C] dark:bg-[#060606]">
-                                    HEIROGLF
+                                HIEROGLF
                                 </span>
                             </Link>
                             <div className="flex items-center gap-6">
@@ -179,21 +179,21 @@ const LandingFooter = ({ mode }) => {
                                     Terms of Service
                                 </Link> */}
                                 <div className="flex gap-4">
-                                    <Link href="https://twitter.com/heiroglf" target="_blank" className="text-white hover:text-[#B1743C] dark:hover:text-black transition-colors">
+                                    <Link href="https://twitter.com/hieroglf" target="_blank" className="text-white hover:text-[#B1743C] dark:hover:text-black transition-colors">
                                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                             <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
                                         </svg>
                                     </Link>
-                                    <Link href="https://instagram.com/heiroglf" target="_blank" className="text-white hover:text-[#B1743C] dark:hover:text-black transition-colors">
+                                    <Link href="https://instagram.com/hieroglf" target="_blank" className="text-white hover:text-[#B1743C] dark:hover:text-black transition-colors">
                                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                             <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.13.62a1.13 1.13 0 1 1-2.25 0 1.13 1.13 0 0 1 2.25 0z" />
                                         </svg>
                                     </Link>
-                                    <Link href="https://t.me/heiroglf" target="_blank" className="text-white hover:text-[#B1743C] dark:hover:text-black transition-colors">
+                                    {/* <Link href="https://t.me/hieroglf" target="_blank" className="text-white hover:text-[#B1743C] dark:hover:text-black transition-colors">
                                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                             <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
                                         </svg>
-                                    </Link>
+                                    </Link> */}
                                 </div>
                             </div>
                             <span className="text-sm text-white flex items-center gap-1">
@@ -204,13 +204,13 @@ const LandingFooter = ({ mode }) => {
                         </div>
                         {/* New info row: email, socials, company registration */}
                         <div className="flex flex-col sm:flex-row items-center justify-between gap-2 mt-4 px-4">
-                            <a href="mailto:letstalk@heiroglf.com" className="text-sm text-white hover:underline flex items-center gap-1">
+                            <a href="mailto:letstalk@hieroglf.com" className="text-sm text-white hover:underline flex items-center gap-1">
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 12H8m8 0a4 4 0 11-8 0 4 4 0 018 0zm8 0a12 12 0 11-24 0 12 12 0 0124 0z" /></svg>
-                                letstalk@heiroglf.com
+                                letstalk@hieroglf.com
                             </a>
 
                             <p className="text-sm text-gray-500 dark:text-white">
-                                Copyright © {year} HEIROGLF. All rights reserved.
+                                Copyright © {year} HIEROGLF. All rights reserved.
                             </p>
                         </div>
                     </div>

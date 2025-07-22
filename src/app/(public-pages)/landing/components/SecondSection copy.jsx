@@ -46,7 +46,7 @@ const CircularFeatureDisplay = ({ features, radius }) => (
                 src="/img/logo/logo-light-full1.png"
                 width={160}
                 height={160}
-                alt="HEIROGLF Logo"
+                alt="HIEROGLF Logo"
                 className="object-contain"
             />
         </div>
@@ -134,7 +134,7 @@ const CryptoFeatures = () => {
                         viewport={{ once: true }}
                         className="text-4xl md:text-5xl font-bold mb-4 text-white"
                     >
-                        The HEIROGLF Ecosystem
+                        The HIEROGLF Ecosystem
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}

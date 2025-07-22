@@ -106,7 +106,7 @@ const AboutSection = () => {
                         <motion.div className="mx-auto max-w-7xl space-y-8">
                             <div className='flex mx-auto max-w-3xl'>
                                 <p className="text-lg text-gray-600 dark:text-gray-300 ">
-                                    HEIROGLF is a Pan-African crypto exchange redefining finance for the continent. Built for Africa, by Africa, we empower users to trade, save, and invest securely in digital assets.
+                                    HIEROGLF is a Pan-African crypto exchange redefining finance for the continent. Built for Africa, by Africa, we empower users to trade, save, and invest securely in digital assets.
                                 </p>
                             </div>
 
